@@ -9,7 +9,7 @@ while i < t:
   i +=1
 ```
 - reason  
-리스트 test가 비어있는 상황
+리스트 test가 비어있는 상황  
 index를 직접 참조해서 값을 넣기위해서는 리스트의 크기가 정해져있어야한다.
 - modified
 ```python
