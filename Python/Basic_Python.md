@@ -12,6 +12,10 @@
 - lambda : 익명 함수 만드는 연산자
 - pass : 조건문을 실행하지 않고 다음 명령을 실행
 
+### 부동 소수점
+사람은 10진수를 사용하고, 컴퓨터는 2진수를 통해서 근사하게 나타내기때문에 오차가 발생한다  
+`decimal.Decimal`, `math.fsum()`, `round()`, `float.as_integer_ratio()`, `math.is_close()` 등으로 해결
+
 ## 실습 기능
 ### 기초 함수 정리
 - append()  
