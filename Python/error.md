@@ -19,3 +19,20 @@ while i<t:
   test.append(input())
   i+=1
 ```
+## 자릿수 더하기
+- error
+*TypeError: 'int' object is not callable*
+```python
+n = input('숫자를 입력해주세요 : ')
+sum = sum(map(int,n))
+print(s)
+```
+- reason
+예약어를 번수명으로 사용했기때문
+- modified
+```python
+del sum    #변수 삭제
+n = input('숫자를 입력해주세요 : ')
+s = sum(map(int,n))
+```
+print(s)
