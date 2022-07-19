@@ -16,7 +16,28 @@
 사람은 10진수를 사용하고, 컴퓨터는 2진수를 통해서 근사하게 나타내기때문에 오차가 발생한다  
 `decimal.Decimal`, `math.fsum()`, `round()`, `float.as_integer_ratio()`, `math.is_close()` 등으로 해결
 
+### Boolean형
+- 논리 자료형으로 참과 거짓을 표현하는 자료형
+- True or False 값을 가짐
+- 비교/논리 연산에 활용
+- Falsy : 0, 0.0, (), [], {}, None, ""
+- 논리 연산자 우선 순위 : not> and> or
+- 단축 평가
+
 ## 실습 기능
+### 기능
+- '''으로 감싸면 주석여러줄 입력이 가능
+- x, y = x, y를 통해서 변수 값을 바꾸는것이 가능
+- 진수 표현:
+2진수 : 0b
+8진수 : 0o
+16진수 : 0x
+- '''을 사용하면 '과 "와 enter까지 입력 가능
+- string interpolation
+print('Hello, %s' %name) # name = 'Kim'
+print('Hello, {}! 성적은 {}'.format(name,score))
+**print(f'Hello, {name}! 성적은 {Score}')**
+
 ### 기초 함수 정리
 - append()  
 list.append()로 사용, 리스트 형태의 Data 마지막에 하나를 추가하는 함수
