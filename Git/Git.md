@@ -48,6 +48,13 @@ working directory로 보내서 file을 modified로 변경
 - git clone {remote_repo} : remote repo를 local로 복사
 - git pull :  remote 의 변경사항 local로 불러오기
 
+## Git 을 활용한 협업
+- git clone
+- git pull
+- git add .
+- git commit
+- git push
 
+현업 개발자들은 branch를 따로 사용해서 merge한다.
 
 
