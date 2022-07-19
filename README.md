@@ -14,6 +14,8 @@ Today I learned
 - 파이썬 기초
 
 ## 22/07/19
+- Jupyter notebook 사용법
+- 
 
 ## 22/07/20
 
