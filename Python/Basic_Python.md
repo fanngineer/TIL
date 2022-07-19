@@ -62,6 +62,8 @@ default : start = 0, end = end, step = 1
 print('Hello, %s' %name) # name = 'Kim'
 print('Hello, {}! 성적은 {}'.format(name,score))
 **print(f'Hello, {name}! 성적은 {Score}')**
+- 문자열에 특정 문자열이 포함되었는지 확인
+'a' in 'vadf' #True 
 
 ### 기초 함수 정리
 - append()  
