@@ -48,6 +48,9 @@ default : start = 0, end = end, step = 1
 - {} 혹은 dict()를 통해 생성
 - index 값으로 key 값을 입력
 
+### id
+- 고유 메모리 주소
+- id()
 
 ## 실습 기능
 ### 기능
