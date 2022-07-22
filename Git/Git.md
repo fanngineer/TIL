@@ -10,6 +10,7 @@ Git 기반의 저장소 서비스를 제공하는 서버
 - CLI : Command-Line Interface : 컴퓨터한테 명령을 내리는 방법
 - Graphical User Interface : 단계가 많고, 컴퓨터의 성능을 많이 소요
 
+
 # Git 사용법
 ## 기본 명령어
 - touch : 파일 생성 명령어
