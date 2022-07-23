@@ -30,5 +30,5 @@ Today I learned
 - 외부 파일 open해서 할당하기
 - Dictionary와 list 자료형을 데이터 처리
 ## 22/07/23
-
+- 연습문제 : Baekjoon_step1, 2
 ## 22/07/24
