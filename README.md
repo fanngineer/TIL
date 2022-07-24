@@ -33,3 +33,5 @@ Today I learned
 ## 22/07/23
 - 연습문제 : Baekjoon step 3-2
 ## 22/07/24
+- Scope 실습 : global, nonlocal 키워드
+- map, filter, zip 활용
