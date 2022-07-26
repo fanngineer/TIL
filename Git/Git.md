@@ -58,4 +58,17 @@ working directory로 보내서 file을 modified로 변경
 
 현업 개발자들은 branch를 따로 사용해서 merge한다.
 
-
+## Git ignore
+- commit guide
+  - 간단한 제목
+  - 한줄 여백
+  - 디테일
+- Bash에서 code . 명령어 > VScode에서 메세지 입력 및 commit push 동시에 가능
+- password와 같이 중요한 key파일이 올라갈 수 있음
+- key 파일은 staging area에 올리지않으면 된다.
+- .gitignore 파일 생성 
+- repository를 생성할때 만든다.
+- 폴더를 ignore할때는 폴더명/ 추가
+- 특정 확장자만 ignore할때는 \*.txt
+- 빈폴더 살려두기 : .gitkeep 파일 생성
+- gitignore.io 에서 기술스택 입력 후 초기 .gitignore파일 만들기
