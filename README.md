@@ -2,6 +2,8 @@
 Today I learned
 
 ## 22/07/26
+- Data Structure Practice
+- Git ignore
 ## 22/07/25
 - Practice Feedback
 - Data Structure
