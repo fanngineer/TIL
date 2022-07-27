@@ -3,7 +3,7 @@ Today I learned
 
 ## 22/07/27
 - OOP
-
+- Error/Except
 ## 22/07/26
 - Data Structure Practice
 - Git ignore
