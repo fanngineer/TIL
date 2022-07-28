@@ -1,9 +1,11 @@
 # TIL
 Today I learned
 
+## 22/07/28
+- OOP Practice
 ## 22/07/27
 - OOP
-- Error/Except
+- Error&Except
 ## 22/07/26
 - Data Structure Practice
 - Git ignore
