@@ -1,8 +1,12 @@
 # TIL
 Today I learned
 
+## 22/08/03
+- JavaScript 기초
+## 22/08/02
+- CSS 기초
 ## 22/08/01
-- HTML
+- HTML 기초
 ## 22/07/31
 - JAVA 기초 - 제어문
 ## 22/07/30
