@@ -1,8 +1,12 @@
 # TIL
 Today I learned
 
-## 22/08/05
+## 22/08/07
+- HTML/CSS Practice
+## 22/08/06
 - Java 객체지향 프로그래밍
+## 22/08/05
+- Java 배열
 ## 22/08/04
 - JavaScript 실습
 ## 22/08/03
