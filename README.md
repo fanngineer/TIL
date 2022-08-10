@@ -1,6 +1,12 @@
 # TIL
 Today I learned
 
+## 22/08/10
+- Java OOP, Error
+## 22/08/09
+- Algorithm practice
+## 22/08/08
+- Algorithm List
 ## 22/08/07
 - HTML/CSS Practice
 ## 22/08/06
