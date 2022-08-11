@@ -1,8 +1,8 @@
-package first;
+package BaekJoon;
 
 import java.util.Scanner;
 
-public class BJ_P1244 {
+public class P1244 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
