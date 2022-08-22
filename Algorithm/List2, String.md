@@ -51,4 +51,11 @@ for(int i =0; i<arr.length; i++){
 ```
 
 ## 문자열
-
+- Java에서 문자열 처리
+  - 문자열 데이터를 저장, 처리해주는 클래스를 제공
+  - String 클래스를 사용
+  - 문자열 처리에 필요한 연산자, 메소드 형태로 제공 : length(), replace(), split(), substring()
+- C와 Java의 String처리의 기본적인 차이점
+  - c는 아스키 코드로 저장
+  - java는 유니코드(UTF-16)로 저장
+  - 파이썬은 유니코드(UTF-8)로 저장
