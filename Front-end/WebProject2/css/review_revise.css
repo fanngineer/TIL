@@ -1,0 +1,44 @@
+header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+main {
+  display: flex;
+  padding: 50px;
+  flex-direction: column ;
+}
+#title {
+  height : 40px;
+
+}
+
+#content {
+  text-align: top;
+  height: 200px;
+  resize : none;
+}
+
+#bt_regist {
+  display: inline-block;
+  background-color: white;
+  color : rgb(160, 160, 230);
+  border-style: solid;
+  border-width : 1.5px;
+  border-color : rgb(160, 160, 230);
+  box-shadow: 30px;
+  width : 60px;
+  height : 35px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#bt_cancel {
+  display: inline-block;
+  background-color: white;
+  color : rgb(235, 130, 130);
+  border-style: solid;
+  border-width : 1.5px;
+  border-color : rgb(235, 130, 130);
+  width : 60px;
+  height : 35px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

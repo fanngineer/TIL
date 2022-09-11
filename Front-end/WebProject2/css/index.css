@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border-bottom: gray 1px solid;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header #main-logo {
+    font-size: 2rem;
+}
+
+header #header-btns {
+    font-size: 1.1rem;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 220px;
+    /* background-color: rgb(195, 247, 229); */
+}
+
+.carousel-inner img {
+    object-fit: cover;
+}
+
+main {
+    margin: auto;
+    max-width: 1000px;
+    width: 100%;
+    /* background-color: rgb(196, 196, 196); */
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+main #search-box {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+main #search-box input {
+    width: 90%;
+}
+
+main .box-container {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+main #select-part {
+    height: 45px;
+}
+
+main .box-container .video-box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+main .box-container .video-box-container svg {
+    cursor: pointer;
+}
+
+main .box-container .video-view {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+main .box-container .video-view .video-card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-bottom: 3px;
+}
+
+main .box-container .video-view .video-card a {
+    color: black;
+    text-decoration: none;
+}
+
+main .box-container .video-view .video-card-img-box {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(182, 182, 182);
+}
+
+main .box-container .video-view .video-card-img-box iframe {
+    width: 300px;
+    height: 200px;
+}
+
+main .box-container .video-view .video-card-desc {
+    width: 300px;
+    height: 100px;
+    padding: 5px;
+}
+
+main .box-container .video-view .video-card-desc .video-card-part-channel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+
+    padding: 10px 20px;
+}
+footer p {
+    color: gray;
+    text-align: center;
+    margin: auto;
+}
