@@ -29,5 +29,21 @@
 ### Cookie 생성 및 추가
 - 쿠키 생성 : javax.servlet.http.Cookie(java.lang.String name, java.lang.String value)
 ```Java
-Cookie 
+Cookie cookie = new Cookie("userid","ssafy");
 ```
+- 추가 : void javax.servlet.http.HttpServletResponse.addCookie(Cookie cookie)
+```Java
+response.addCookie(cookie);
+```
+- 주요 메서드
+void setComment (String) : 쿠키에대한 설명 설정
+void setDomain (String) : 쿠키의 유효한 도메인 설정
+void setMaxAge (int expiry) : 쿠키 유효기간 설정
+void setPath (String) : 쿠키 유효 디렉토리 설정
+void setValue (String) : 쿠키 값 설정
+String getComment() : 쿠키 설명 반환
+String getDomain() : 쿠키 유효 도메인 반환
+int getMaxAge() : 쿠키 유효기간 반환
+String getPath() : 쿠키 유효 디렉토리 반환
+String getValue() : 쿠키 값 반환
+
