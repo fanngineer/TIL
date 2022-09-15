@@ -47,3 +47,44 @@ int getMaxAge() : 쿠키 유효기간 반환
 String getPath() : 쿠키 유효 디렉토리 반환
 String getValue() : 쿠키 값 반환
 
+### Session : javax.servlet.http.HttpSession
+- 사용자가 웹 서버에 접속해 있는 상태를 하나의 단위보고 세션이라함.
+- 각 세션은 session id 를 이용해 구분
+- WAS의 메모리에 객체 형태로 저장
+- 메모리가 허용하는 용량 까지 제한없이 저장가능
+- 쿠키는 클라이언트에 저장되기 때문에 공유 PC의 경우 보안에 취약할 수 있다. 하지만 세션은 서버에 저장되기 때문에 쿠키에 비해 보안이 좋다.
+- 사용자(로그인)정보 및 장바구니 등에 사용
+
+### Session 동작순서
+- Client가 페이지 요청
+- 서버는 쿠키에 session id가 있는지 확인
+- session id가 존재하지 않으면 session id를 생성해 쿠키에 쓴 다음 클라이언트로 반환
+- 생성된 session id를 이용하여 서버 내 메모리를 생성
+- 클라이언트가 다음 요청 시 쿠키에 session id(JSESSIONID)를 포함에 전달하면 서버내에 저장된 session id와 비교하여 데이터를 조회
+
+### Cookie 특징
+- 이름(key),값(value), 만료일(Expire date,저장기간) , 경로정보 로 구성된다.
+- 클라이언트에 최대 300개의 쿠키를 저장할 수 있다.
+- 하나의 도메인당 20개의 쿠키를 저장할 수 있다.
+- 쿠키 하나는 4KB(=4096byte) 까지 저장가능
+
+### Cookie 생성 및 추가
+- 쿠키 생성 : javax.servlet.http.Cookie(java.lang.String name, java.lang.String value)
+```Java
+Cookie cookie = new Cookie("userid","ssafy");
+```
+- 추가 : void javax.servlet.http.HttpServletResponse.addCookie(Cookie cookie)
+```Java
+response.addCookie(cookie);
+```
+- 주요 메서드
+void setComment (String) : 쿠키에대한 설명 설정
+void setDomain (String) : 쿠키의 유효한 도메인 설정
+void setMaxAge (int expiry) : 쿠키 유효기간 설정
+void setPath (String) : 쿠키 유효 디렉토리 설정
+void setValue (String) : 쿠키 값 설정
+String getComment() : 쿠키 설명 반환
+String getDomain() : 쿠키 유효 도메인 반환
+int getMaxAge() : 쿠키 유효기간 반환
+String getPath() : 쿠키 유효 디렉토리 반환
+String getValue() : 쿠키 값 반환
