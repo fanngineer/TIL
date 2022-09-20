@@ -62,29 +62,28 @@ String getValue() : 쿠키 값 반환
 - 생성된 session id를 이용하여 서버 내 메모리를 생성
 - 클라이언트가 다음 요청 시 쿠키에 session id(JSESSIONID)를 포함에 전달하면 서버내에 저장된 session id와 비교하여 데이터를 조회
 
-### Cookie 특징
-- 이름(key),값(value), 만료일(Expire date,저장기간) , 경로정보 로 구성된다.
-- 클라이언트에 최대 300개의 쿠키를 저장할 수 있다.
-- 하나의 도메인당 20개의 쿠키를 저장할 수 있다.
-- 쿠키 하나는 4KB(=4096byte) 까지 저장가능
+### Session 설정
+- 브라우저 당 하나의 JSESSIONID 를 할당
+- 아이디 또는 닉네임과 같이 로그인했을 경우 자주 사용되는 정보를 session에 저장하면 db에 접근할 필요가 없으므로 효율적이다.
 
-### Cookie 생성 및 추가
-- 쿠키 생성 : javax.servlet.http.Cookie(java.lang.String name, java.lang.String value)
+### Session 사용하기
+- 요청 객체로부터 session 객체를 얻어온다.
+- session에 데이터를 설정하여 저장한다.
 ```Java
-Cookie cookie = new Cookie("userid","ssafy");
+HttpSession session = request.getSession();
+session.setAttribute("userid","ssafy");
 ```
-- 추가 : void javax.servlet.http.HttpServletResponse.addCookie(Cookie cookie)
+- session에서 값을 반환하는 getAttribute에 메서드는 반환형이 Object
 ```Java
-response.addCookie(cookie);
+String userid = '(String)session.getAttribute("userid");
 ```
 - 주요 메서드
-void setComment (String) : 쿠키에대한 설명 설정
-void setDomain (String) : 쿠키의 유효한 도메인 설정
-void setMaxAge (int expiry) : 쿠키 유효기간 설정
-void setPath (String) : 쿠키 유효 디렉토리 설정
-void setValue (String) : 쿠키 값 설정
-String getComment() : 쿠키 설명 반환
-String getDomain() : 쿠키 유효 도메인 반환
-int getMaxAge() : 쿠키 유효기간 반환
-String getPath() : 쿠키 유효 디렉토리 반환
-String getValue() : 쿠키 값 반환
+void setAttribute (String name,Object value) : session에 지정한 name 에 해당하는 객체를 추가
+void setMaxInactiveInterval (int interval) : 사용자가 다음 요청을 보낼 때 까지 세션을 유지하는 최대시간 (초단위)를 설정
+void invalidate() : 현재 세션을 없애고, 속성도 삭제한다.
+String getId() : 현재 세션의 고유 id를 반환
+long getLastAccessTime() : 현재 세션에 클라이언트가 마지막으로 요청을 보낸 시간을 반환 (long)
+Object getAttribute (String name) : name에 해당하는 속성값 반환 , 반환형이 Object 임에 유의
+long getCreationTime() : 세션이 만들어진 시간 반환
+void removeAttribute(String name) : 세션에서 지정한 이름의 객체를 제거
+Enumeration getAttributeNames() : 세션에서 모든 객체의 이름을 Enumeration 형으로 반환
