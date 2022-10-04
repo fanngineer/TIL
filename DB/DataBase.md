@@ -32,3 +32,15 @@
 
 - 대소문자를 구별하지 않음. (데이터의 대소문자는 구분)
 - 절차적인 언어가 아니라 선언적 언어
+
+## SQL의 종류
+- DML (Data Manipulation Language) : 데이터 조작 언어
+  - 데이터베이스에서 데이터를 조작하거나 조회할 때 사용
+  - 테이블의 레코드를 CRUD ( Create, Read, Update, Delete)
+- DDL (Data Definition Language) : : 데이터 정의 언어
+  - 데이터 베이스 객체 (table, view, index 등 의 구조를 정의
+- TCL (Transaction Control Language) : 트랜잭션 제어 언어
+  - 트랜잭션단위로 실행한 명령문을 적용하거나 취소
+- DCL (Data Control Language) : 데이터 제어 언어
+  - Database, Table 접근권한이나 CRUD 권한 정의
+  - 특정 사용자에게 테이블의 검색권한 부여/금지
