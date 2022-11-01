@@ -5,6 +5,43 @@
 - Versatile
 - Performant
 
+## MVVM Pattern
+- Model + View + ViewModel
+- 애플리케이션 로직을 UI로 부터 분리하기 위해 설계한 디자인 패턴
+- Model : 순수 자바스크립트 객체(데이터를 담기 위해 사용)
+- View : 웹페이지의 DOM(HTML)
+- ViewModel : Vue의 역할, View와 Model 사이에서 Data와 DOM에 관련된 일 처리
+
+## Vue Instance 생성
+- 모든 Vue 앱은 Vue 함수로 새 인스턴스를 만들며 시작.
+```HTML
+<script>
+  const app = new Vue({
+      //옵션
+  })
+</script>
+```
+- Vue 인스턴스를 생성할 때는 Options객체를 전달해야 함.
+## Vue Instance - Options : el
+- Vue 인스턴스에 마운트할 기존 DOM엘리먼트 지정
+- CSS selector or HTML Element 작성
+- new를 이용한 인스턴스 생성때만 사용한다.
+```HTML
+<div id = "app"></div>
+
+<script>
+  const app = new Vue({
+      //옵션
+  })
+</script>
+
+<script>
+  const div = document.querySelector("#app");
+  const app = new Vue({
+    el : div
+  })
+</script>
+```
 
 # Vue Template Syntax
 ## Directive
