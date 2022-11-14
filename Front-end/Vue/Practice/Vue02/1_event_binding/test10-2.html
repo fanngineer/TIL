@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>여행지 선택하깅</h2>
+        <input type="checkbox" id="seoul" v-model="areas" value="서울">
+        <label for="seoul">서울</label>
+        <input type="checkbox" id="hawai" v-model="areas" value="하와이">
+        <label for="hawai">하와이</label>
+        <input type="checkbox" id="newyork" v-model="areas" value="뉴욕">
+        <label for="seoul">뉴욕</label>
+
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                areas: []
+            },
+            methods: {
+            }
+        })
+    </script>
+</body>
+
+</html>

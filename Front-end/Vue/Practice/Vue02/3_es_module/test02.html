@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model.number="num1">
+        <select v-model='op'>
+            <option value="+">+</option>
+            <option value="-">-</option>
+        </select>
+        <input type="text" v-model.number="num2">
+        <button @click="doCal">계산</button>
+        <div>{{result}}</div>
+    </div>
+    <script type="module" src="./test02.js"></script>
+</body>
+
+</html>

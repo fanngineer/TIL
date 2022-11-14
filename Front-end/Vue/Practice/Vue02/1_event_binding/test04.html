@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>페이지 이동</h2>
+        <a href="test03.html" @click="sendMsg1">페이지 이동 막기</a>
+        <a href="test03.html" @click="sendMsg2">페이지 이동 막기2</a>
+        <a href="test03.html" @click.prevent="sendMsg1">페이지 이동 막기3</a>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Vue.js'
+            },
+            methods: {
+                greet(msg) {
+                    alert(`Hello ${msg}`)
+                },
+                sendMsg1() {
+                    alert('막아')
+                },
+                sendMsg2() {
+                    event.preventDefault();
+                    alert('막아')
+                },
+
+            }
+        })
+    </script>
+</body>
+
+</html>

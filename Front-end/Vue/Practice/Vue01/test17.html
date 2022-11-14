@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <input type="text" v-model="msg"/>
+      <h3>{{msg | count2('입력바래')}}</h3>
+    </div>
+
+    <script>
+      //전역필터
+      Vue.filter(
+        'count1',(val) => {
+          if(val.length ===0) return;
+          return `${val} : ${val.length}자`;
+        }
+      )
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            msg : '',
+          };
+        },
+        methods : {
+          greet()
+          {
+            //메서드 안에서 사용하는 this는 vue 인스턴스
+            alert(`${this.msg} ${this.name}님`);
+          }
+        },
+        filters : {
+          //지역필터
+          count2(val, alternative){
+            if(val.length===0) return alternative;
+            return `${val} : ${val.length}자`;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

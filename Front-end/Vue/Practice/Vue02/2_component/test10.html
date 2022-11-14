@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>부모 컴포넌트</h2>
+        <h2>총 투표수 : {{total}}</h2>
+        <child @add-count="addTotalCount" title='코딩'></child>
+        <child @add-count="addTotalCount" title='알고리즘'></child>
+        <child @add-count="addTotalCount" title='스프링'></child>
+    </div>
+
+    <template id="child-view">
+        <div>
+
+            <button @click="addCount">클릭</button>
+            <div>{{title}}의 득표수는 {{count}}</div>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('child', {
+            template: '#child-view'
+            , props: [
+                'title'
+            ],
+            data() {
+                return {
+                    count: 0
+                }
+            },
+            methods: {
+                addCount() {
+                    this.count += 1;
+                    //부모에게 이벤트를 날림
+                    this.$emit('add-count')
+                }
+            }
+        })
+        //Root component(부모)
+        const app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    total: 0
+                }
+            },
+            methods: {
+                addTotalCount() {
+                    this.total += 1
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

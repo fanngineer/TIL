@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>부모 컴포넌트</h2>
+        <child area="대구" :msg="msg[parseInt(Math.random()*4)]"></child>
+        <child area="인천" :msg="msg[parseInt(Math.random()*4)]"></child>
+        <child area="부산" :msg="msg[parseInt(Math.random()*4)]"></child>
+        <child area="서울" :msg="msg[parseInt(Math.random()*4)]"></child>
+    </div>
+
+    <template id="child-view">
+        <div>
+            <h3>{{area}} 지역 컴포넌트</h3>
+            <div>{{msg}}</div>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('child', {
+            template: '#child-view',
+            props: [
+                'area', 'msg'
+            ]
+        })
+
+        //Root component(부모)
+        const app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    msg: ['spring', 'vue', 'java', 'javascript'],
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

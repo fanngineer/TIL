@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <my-comp></my-comp>
+    </div>
+
+    <template id="mycomponent">
+        <h2>{{msg}}</h2>
+        <!--최상위 태그는 반드시 하나-->
+    </template>
+
+    <script>
+        Vue.component('my-comp', {
+            template: '#mycomponent'
+            , data() {
+                return {
+                    msg: "hello"
+                }; //return(새로 생김)이 아닌 경우에 서로 데이터를 공유하는 문제 발생 가능
+            }
+        })
+
+
+        const app = new Vue({
+            el: '#app',
+            components: {
+                'my-local': {
+                    template: '<h2>지역 컴포넌트</h2>'
+                }
+
+            },
+            data: {
+            },
+        })
+
+        const app2 = new Vue({
+            el: '#app2',
+            data: {
+            },
+        })
+    </script>
+</body>
+
+</html>

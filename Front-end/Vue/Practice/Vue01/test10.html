@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <input type="text" v-model="msg"/>
+      <h1 v-show="msg.length>3">Hello</h1>
+    </div>
+
+    <script>
+      //HTML 요소들 넣기
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return{
+            msg : "선택",
+            ok : false,
+          };
+        },
+      });
+    </script>
+  </body>
+</html>

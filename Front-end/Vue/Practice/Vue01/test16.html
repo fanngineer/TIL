@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+  
+      <button @click = "greet">인사</button>
+    </div>
+
+    <script>
+      
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            msg : "안녕하세요",
+            name : "Shawn"
+          };
+        },
+        methods : {
+          greet()
+          {
+            //메서드 안에서 사용하는 this는 vue 인스턴스
+            alert(`${this.msg} ${this.name}님`);
+          }
+
+        },
+      });
+    </script>
+  </body>
+</html>

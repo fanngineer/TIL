@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(name,index) in names">{{index+1}} : {{name}}</li>
+    </ul>
+    <ul>
+      <li v-for="food in humans">{{food.name}} : {{food.price}}</li>
+    </ul>
+  </div>
+
+
+
+
+  <script>
+    //HTML 요소들 넣기
+    const app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          age: "0",
+          msg: "선택",
+          ok: false,
+          names: ['coffee', 'tea', 'cake', 'tiramisu'],
+          humans: [
+            {
+              name: 'coffee',
+              price: 10000
+            }, {
+              name: 'tea',
+              price: 12000
+            }, {
+              name: 'cake',
+              price: 8000
+            }
+          ],
+        };
+      },
+    });
+  </script>
+</body>
+
+</html>
