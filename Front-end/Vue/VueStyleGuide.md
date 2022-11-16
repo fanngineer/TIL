@@ -33,4 +33,42 @@
 - 해당 규칙을 위반해도 코드는 실행되지만, 위반은 드물어야 하는게 좋음.
 
 ### 컴포넌트 파일
-- 
+- Bad Case
+```JavaScript
+Vue.component('TodoList',{
+  //...
+})
+```
+- Good Case
+```JavaScript
+components/
+|- TodoList.js
+|- TodoItem.js
+```
+
+### 싱글 파일 컴포넌트 이름 규칙 지정
+- Bad Case
+```JavaScript
+components/
+|- mycomponent.vue
+```
+- Good Case
+```JavaScript
+components/
+|- MyComponent.vue
+```
+### 기본 컴포넌트 이름
+- 같은 기능에 해당되는 컴포넌트들은 해당 단어를 이름 제일 앞에 공통 포함 시킨다.
+
+### 단일 인스턴스 컴포넌트 이름
+- 활성 인스턴스가 하나만 있어야 하는 구성 요소는 The 접두사로 시작
+
+## Priority C : Recommended
+- 동일하게 좋은 여러가지 옵션이 존재하는 경우, 일관성을 보장하기 위해 임의의 선택 가능
+- 이 규칙은 각각의 수용가능한 옵션을 설명하고 기본 선택을 제안함
+- 좋은 이유가 있다면 자유롭게 선택이 가능
+
+## Priority D : Use with Caution (주의 요함)
+- 잠재적 위험요소를 인식시켜주고 언제 그리고 왜 피해야되는지 설명해줌.
+
+
