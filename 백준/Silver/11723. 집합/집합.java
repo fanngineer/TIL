@@ -8,14 +8,14 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
-	static HashSet<Integer> set;
+	static int[] set;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
 		int M = Integer.parseInt(br.readLine());
-		set = new HashSet<>();
+		set = new int[21];
 		for(int i = 0; i<M; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			String order = st.nextToken();
@@ -25,30 +25,28 @@ public class Main {
 			}
 			switch(order) {
 			case "add" :
-				set.add(num);
+				set[num] = 1;
 				break;
 			case "remove" :
-				set.remove(num);
+				set[num] = 0;
 				break;
 			case "check" :
-				if(set.contains(num)) {
-					sb.append(1).append("\n");
-				}
-				else {
-					sb.append(0).append("\n");
-				}
+				sb.append(set[num]).append("\n");
 				break;
 			case "toggle" :
-				if(set.contains(num)) set.remove(num);
-				else set.add(num);
+//				System.out.println(set[num]);
+				set[num] = set[num]^1;
+//				System.out.println(set[num]);
 				break;
 			case "all" :
 				for(int j = 1; j<=20; j++) {
-					set.add(j);
+					set[j]=1;
 				}
 				break;
 			case "empty" :
-				set.clear();
+				for(int j = 1; j<=20; j++) {
+					set[j]=0;
+				}
 				break;
 			}
 		}
